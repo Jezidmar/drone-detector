@@ -1,0 +1,38 @@
+{
+  "activation_dropout": 0.0,
+  "architectures": [
+    "EATModel"
+  ],
+  "auto_map": {
+    "AutoModel": "modeling_eat.EATModel",
+    "AutoConfig": "configuration_eat.EATConfig"
+  },
+  "attn_drop_rate": 0.0,
+  "depth": 12,
+  "drop_rate": 0.0,
+  "embed_dim": 768,
+  "end_drop_path_rate": 0.0,
+  "fixed_positions": true,
+  "img_size": [
+    1024,
+    128
+  ],
+  "in_chans": 1,
+  "layer_norm_first": false,
+  "max_length": 768,
+  "mel_bins": 128,
+  "mlp_ratio": 4.0,
+  "model_type": "eat",
+  "model_variant": "pretrain",
+  "norm_affine": true,
+  "norm_eps": 1e-06,
+  "num_classes": 527,
+  "num_heads": 12,
+  "patch_size": 16,
+  "post_mlp_drop": 0.0,
+  "qkv_bias": true,
+  "start_drop_path_rate": 0.0,
+  "stride": 16,
+  "torch_dtype": "float32",
+  "transformers_version": "4.51.3"
+}

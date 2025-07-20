@@ -1,0 +1,7 @@
+numpy
+onnxruntime==1.20.0
+torch
+torchaudio
+soundfile
+sounddevice==0.4.6
+pyaudio
