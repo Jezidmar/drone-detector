@@ -7,14 +7,7 @@ DOCKER_IMG=drone-det
 
 env:
 	conda create -y -n ${ENV} python=3.13
-	conda activate drone-detector
-	pip install -r requirements.txt
-
-install:
-	conda create -n drone-detector python=3.13
-	
-	apt install python3-pytest
-	pip install -r requirements.txt
+	conda run -n ${ENV} pip install -r requirements.txt
 
 
 test:
@@ -34,10 +27,10 @@ patch_model_dict:
 
 
 docker_build:
-	docker build -t {DOCKER_IMG} docker/
+	docker build -t ${DOCKER_IMG} docker/
 
 docker_run:
-	docker run --rm -it {DOCKER_IMG}
+	docker run --rm -it ${DOCKER_IMG}
 
 
 clean:
