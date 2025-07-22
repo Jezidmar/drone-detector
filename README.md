@@ -3,7 +3,7 @@ Following is the Drone Detector project
 
 Work is based on the geronimo [dataset](https://huggingface.co/geronimobasso). One can find script for train/val/test split in /data folder. Prep includes cutting dataset to pieces of 1 second which is the target chunk size. I used the pretrained encoder from the recent [ViT](https://github.com/cwx-worst-one/EAT) SOTA architecture as the backbone and trained classification head for binary classification (drone/ambient). 
 
-The important observation is that the dataset is built as a combination of several smaller datasets, thus the possibility of having data drift clusters is above zero.
+The important observation is that the dataset is built as a combination of several smaller datasets, thus the probability of having data drift clusters is above zero.
 
 ### Installation:
 
@@ -23,10 +23,10 @@ After preprocessing (chunking/trimming), dataset looks like this:
 
 Selected sound representation is MEL Spectrogram. The hyperparameters were following:
 
-    - n_mels - 128
-    - frame_size - 25ms
-    - hop_length - 10ms
-    - sample_rate - 16kHz
+    - n_mels = 128
+    - frame_size = 25ms
+    - hop_length = 10ms
+    - sample_rate = 16kHz
     - norm_mean = -4.268
     - norm_std = 4.569
 
